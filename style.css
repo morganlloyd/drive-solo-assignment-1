@@ -9,7 +9,6 @@ html { box-sizing: border-box;}
 /* BASE STYLES */
 
 
-
 html {
     font-size: 125%;
 }
@@ -35,10 +34,10 @@ h1 {
     color: #BA0621;
     font-family: 'Kanit',
     sans-serif;
-    font-size: 170px;
-    line-height: 150px;
-    letter-spacing: 3px;
-    margin-top: 500px;
+    font-size: 117px;
+    line-height: 97px;
+    letter-spacing: 1px;
+    margin-top: 280px;
 }
 
 h2 {
@@ -46,19 +45,19 @@ h2 {
     font-family: 'Kanit',
     sans-serif;
     font-weight: 700;
-    font-size: 70px;
+    font-size:45px;
 }
 
 h3 {
     font-family: 'Kanit',
     sans-serif;
-    font-size: 35px;
+    font-size: 42px;
 }
 
 p {
     font-family: 'Roboto',
     sans-serif;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 section {
@@ -66,7 +65,7 @@ section {
 }
 
 .wrapper {
-    max-width: 1700px;
+    max-width: 1280px;
     margin: 0 auto;
     width: 90%;
 }
@@ -119,14 +118,18 @@ nav li {
 }
 
 header nav a {
-    font-size: 35px;
+    font-size: 21px;
     font-family: 'Catamaran',
     sans-serif;
-    font-weight: lighter;
+    font-weight: 100;
+
+    letter-spacing: 2px;
     text-transform: uppercase;
+    transition: 0.3s;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     color: #CC1D36;
 }
 
@@ -143,6 +146,10 @@ header p {
     letter-spacing: 0.3px;
 }
 
+.headerFlex nav i {
+    display: none
+}
+
 .secondHeaderFlex {
     display: flex;
     justify-content: space-between;
@@ -156,14 +163,14 @@ header p {
 .headerIcons ul {
     position: absolute;
     bottom: 30px;
-    right: 500px;
+    right: 90px;
 }
 
 .headerIcons a {
     color: white;
     display: block;
     padding-top: 40px;
-    font-size: 50px;
+    font-size: 20px;
 }
 
 /* NEWS */
@@ -200,7 +207,7 @@ padding-left: 50px;
 }
 
 .highlightContainer p {
-    font-size: 40px;
+    font-size: 20px;
     font-family: 'Lato',
     sans-serif;
 }
@@ -213,11 +220,19 @@ button {
     color: white;
     border: none;
     padding: 20px 30px;
+    text-transform: uppercase;
     text-align: center;
     line-height: 29px;
     font-family: 'Kanit',
     sans-serif;
     font-size: 30px;
+    transition: 0.3s;
+}
+
+button:hover,
+button:focus {
+    background-color: #6c0918;
+
 }
 /* NEW MODELS */
 
@@ -248,7 +263,7 @@ button {
     text-align: left;
 }
 .newModelsContainer p {
-    font-size: 40px;
+    font-size: 20px;
 }
 
 
@@ -273,7 +288,7 @@ button {
 }
 
 .styleContainer p {
-    font-size: 40px;
+    font-size: 20px;
 }
 /* LOWER SECTION */
 
@@ -302,6 +317,7 @@ button {
 
 .icon h3 {
     color: white;
+    font-size: 30px;
     margin: 0px;
     padding: 0px;
 }
@@ -322,7 +338,7 @@ button {
 .footerNav p {
     font-family: 'Roboto',
     sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .footerNavContainer {
@@ -340,42 +356,30 @@ button {
 }
 
 .footerNavFlex nav a {
-    font-size: 35px;
+    font-size: 20px;
     font-family: 'Roboto',
     sans-serif;
     text-transform: uppercase;
-}
-
-
-
-
-
-/*.footerNav h3 {
-    font-family: 'Kanit',
-    sans-serif;
-    padding-bottom: 10px;
-}
-
-.footerNav p {
-    font-family: 'Roboto',
-    sans-serif;
-    font-size: 30px;
-    font-weight: 100;
-}
-.contactInfo span {
-    display: block;
-}
-
-.footerNav ul {
-    display: block;
     margin-top: 20px;
 }
 
-.footerNav li {
-    text-align: right;
-    font-weight: lighter;
-    font-size: 25px;
+.navButton {
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #0B0101;
 }
+.contactFlex span {
+    display: block;
+    padding-bottom: 10px;
+    font-family: 'Roboto',
+    sans-serif;
+}
+
+input {
+    padding: 10px 20px;
+}
+
+
 
 /* FOOTER */
 
@@ -386,7 +390,7 @@ footer {
 
 footer p {
     text-align: center;
-    line-height: 29px;
+    line-height: 25px;
     font-family: 'Roboto',
     sans-serif;
     color: white;
@@ -396,26 +400,27 @@ footer p {
 
 
 
-
-
 /* MEDIA STYLES */
 
-@media(max-width: 1000px) {
+@media(max-width: 900px) {
 
-
+    .wrapper {
+        width: 95%;
+    }
+    header {
+        min-height: auto;
+    }
     header h2 {
         display: none;
     }
-
     .headerFlex nav {
         display: none;
+    
     }
     .headerFlex i {
-        display: inline-block;
+        display: inline-block 
     }
-    .headerlogo p {
-        display: none;
-    }
+    
     .headerIcons {
         display: none;
     }
@@ -484,7 +489,71 @@ footer p {
     }
 }
 
-@media(max-width: 500px) {
+@media(max-width: 375px) {
     
+    section {
+        padding: 40px 0;
+    }
 
+    h1 {
+        font-size: 90px;
+    }
+
+    h2 {
+        padding-bottom: 2;
+    }
+    h2, h3 {
+        font-size: 35px;
+    }
+
+    .secondHeaderFlex p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .highlightContainer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    button {
+        font-size: 20px;
+    }
+
+    .newModelsContainer {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .styleContainer {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    input {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navButton {
+        width: 100%;
+    }
+
+    .subscribeFlex {
+        text-align: center;
+    }
+    
+    .footerNavFlex li {
+        margin-right: 0px;
+        margin-top: 5px;
+        text-align: center;
+    }
+
+    .footerNavFlex ul {
+        padding-top: 10px;
+    }
+
+    footer p {
+        font-size: 20px;
+    }
 }
